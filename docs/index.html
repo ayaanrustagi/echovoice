@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>EchoVoice · Say what matters</title>
+  <meta name="description" content="EchoVoice is a free, private AAC app for iPhone and iPad. One-tap phrases, sentence building, typing, and phrases in your own recorded voice.">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="assets/app-icon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/app-icon.png">
+  <link rel="preload" as="image" href="assets/shots/iphone-1-board.jpg">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- Plain top bar that scrolls away with the hero -->
+  <header class="topbar">
+    <a class="brand brand-lg" href="#top" aria-label="EchoVoice home">
+      <img src="assets/app-icon.png" alt="" width="38" height="38">
+      <span>EchoVoice</span>
+    </a>
+    <nav class="top-links" aria-label="Quick links">
+      <a href="#story">Our story</a>
+      <a href="install/">Download <svg class="i"><use href="#i-arrow"/></svg></a>
+    </nav>
+  </header>
+
+  <!-- Liquid-glass pill that slides in once you scroll -->
+  <div class="nav-wrap">
+    <nav class="nav liquid" aria-label="Main">
+      <a class="brand" href="#top" aria-label="EchoVoice home">
+        <img src="assets/app-icon.png" alt="" width="30" height="30">
+        <span>EchoVoice</span>
+      </a>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#voice">Your voice</a>
+        <a href="#journal">Journal</a>
+        <a href="#everything">Everything</a>
+        <a href="#story">Story</a>
+      </div>
+      <a class="nav-cta" href="install/">Download</a>
+    </nav>
+  </div>
+
+  <main id="main">
+    <!-- ───────── Hero ───────── -->
+    <section class="hero" id="top">
+      <p class="kicker load" style="--d:0">Built for iPhone and iPad</p>
+      <h1 class="load" style="--d:1">The AAC app that speaks<br>in your own voice</h1>
+      <a class="cta cta-sm load" style="--d:2" href="install/">Download for iPhone <svg class="i"><use href="#i-arrow"/></svg></a>
+
+      <div class="stage" aria-hidden="true">
+        <span class="sticker s-mic"     style="--r:-18deg; --x:22%; --y:6%;  --t:5.2s"><svg><use href="#st-mic"/></svg></span>
+        <span class="sticker s-onetap"   style="--r:16deg;  --x:68%; --y:4%;  --t:7s"><svg><use href="#st-onetap"/></svg></span>
+        <span class="sticker s-bigbear" style="--r:10deg;  --x:60%; --y:42%; --t:8s"><svg><use href="#st-bear"/></svg></span>
+        <span class="sticker s-wave"    style="--r:-8deg;  --x:20%; --y:56%; --t:6.4s"><svg><use href="#st-wave"/></svg></span>
+
+        <div class="hero-tilt">
+          <figure class="iphone hero-phone">
+            <img src="assets/shots/iphone-1-board.jpg" alt="" width="598" height="1300" fetchpriority="high">
+            <span class="tap" id="tap"></span>
+          </figure>
+          <p class="said" id="said"><span id="saidText">Can I have some water?</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────── Three ways ───────── -->
+    <section class="block" id="features">
+      <header class="head pop">
+        <h2>Tap it. Build it. Say it.</h2>
+        <p>The words you need most are one tap away. Everything else is a sentence or a keyboard away.</p>
+      </header>
+      <div class="duo" data-scrub>
+        <figure class="iphone duo-back"><img src="assets/shots/iphone-4-settings.jpg" alt="EchoVoice settings: access modes, voice and board density" width="598" height="1300" loading="lazy"></figure>
+        <figure class="iphone duo-front"><img src="assets/shots/iphone-1-board.jpg" alt="EchoVoice board with Yes, No, Water, Bathroom, Pain, Hungry, Cold, Blanket, HELP and I'm Okay" width="598" height="1300" loading="lazy"></figure>
+        <span class="sticker s-tile-a pop" style="--r:-10deg"><svg><use href="#st-yes"/></svg></span>
+        <span class="sticker s-tile-b pop" style="--r:8deg"><svg><use href="#st-pain"/></svg></span>
+      </div>
+      <ul class="points">
+        <li class="pop"><b>Quick</b>Needs, feelings and your own phrases. One tap and it's said.</li>
+        <li class="pop"><b>Build</b>Core words that never move, so your hand learns where they live.</li>
+        <li class="pop"><b>Type</b>The full keyboard for names, jokes and appointments.</li>
+      </ul>
+    </section>
+
+    <!-- ───────── Voice bank ───────── -->
+    <section class="block bank-block" id="voice">
+      <h2 class="mega pop">Bank <span class="inline-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span> your voice</h2>
+      <p class="lead pop">Record the phrases that matter while you still can. Later, one tap plays your real recording, not a robot. Apple Personal Voice fills in the rest.</p>
+      <div class="bank-stage">
+        <figure class="iphone bank-phone slide-up"><img src="assets/shots/iphone-2-banking.jpg" alt="Message Banking screen listing phrases to record in your own voice" width="598" height="1300" loading="lazy"></figure>
+        <div class="quote-card q1 pop"><span class="play"><svg class="i"><use href="#i-play"/></svg></span><div><b>"Goodnight, kiddo."</b><small>Your voice · recorded March</small></div></div>
+        <div class="quote-card q2 pop"><span class="play"><svg class="i"><use href="#i-play"/></svg></span><div><b>"Love you more."</b><small>Your voice · recorded March</small></div></div>
+        <span class="sticker s-bank-mic pop" style="--r:14deg"><svg><use href="#st-mic"/></svg></span>
+      </div>
+    </section>
+
+    <!-- ───────── Journal ───────── -->
+    <section class="block split" id="journal">
+      <div class="split-copy">
+        <h2 class="pop">A journal for the voice they love hearing.</h2>
+        <p class="lead pop">Read one sentence every week. EchoVoice measures your speaking rate, pauses and pitch on the phone, compares them only with you, and makes a one-page PDF for your speech therapist.</p>
+        <p class="note pop">Not a medical device. It doesn't diagnose or monitor any condition.</p>
+      </div>
+      <div class="split-art">
+        <figure class="iphone tilt-r slide-up"><img src="assets/shots/iphone-3-journal.jpg" alt="Voice Journal screen asking you to read a sentence aloud" width="598" height="1300" loading="lazy"></figure>
+        <div class="mini-chart pop" aria-hidden="true">
+          <small>Speaking rate · last 8 weeks</small>
+          <svg viewBox="0 0 160 56"><rect x="0" y="16" width="160" height="20" rx="4"/><polyline points="4,30 26,24 48,28 70,20 92,26 114,32 136,28 156,34"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────── iPad ───────── -->
+    <section class="block ipad-block">
+      <header class="head pop">
+        <h2>Bigger board. Same muscle memory.</h2>
+        <p>On iPad the grid grows to fit more phrases on a page, and every word stays exactly where you left it.</p>
+      </header>
+      <div class="ipads" data-scrub>
+        <figure class="ipad ipad-back"><img src="assets/shots/ipad-2-journal.jpg" alt="" width="1200" height="1600" loading="lazy"></figure>
+        <figure class="ipad ipad-front"><img src="assets/shots/ipad-1-board.jpg" alt="EchoVoice on iPad with a 3-column board of phrases" width="1200" height="1600" loading="lazy"></figure>
+      </div>
+    </section>
+
+    <!-- ───────── Access sticker wall ───────── -->
+    <section class="block" id="access">
+      <header class="head pop">
+        <h2>However you move, it moves with you.</h2>
+        <p>Touch, your head, your eyes, or a sticker on the wheelchair arm.</p>
+      </header>
+      <div class="wall">
+        <figure class="tag pop" style="--r:-6deg"><svg><use href="#st-hand"/></svg><figcaption>Big touch targets</figcaption></figure>
+        <figure class="tag pop" style="--r:5deg"><svg><use href="#st-head"/></svg><figcaption>Head tracking</figcaption></figure>
+        <figure class="tag pop" style="--r:-3deg"><svg><use href="#st-eye"/></svg><figcaption>Eye gaze on TrueDepth</figcaption></figure>
+        <figure class="tag pop" style="--r:8deg"><svg><use href="#st-blink"/></svg><figcaption>5 blinks calls HELP</figcaption></figure>
+        <figure class="tag pop" style="--r:-9deg"><svg><use href="#st-nfc"/></svg><figcaption>NFC phrase tags</figcaption></figure>
+        <figure class="tag pop" style="--r:4deg"><svg><use href="#st-aa"/></svg><figcaption>Huge text, high contrast</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- ───────── Everything inside (bento) ───────── -->
+    <section class="block" id="everything">
+      <header class="head pop">
+        <h2>Small things that add up<br>to a whole conversation</h2>
+        <p>Private, on-device, and built around one job: helping you get the words out.</p>
+      </header>
+      <div class="bento">
+        <article class="tile b-voice pop">
+          <div class="b-art crop-phone"><img src="assets/shots/iphone-2-banking.jpg" alt="" width="598" height="1300" loading="lazy"></div>
+          <p>Message banking in your real voice</p>
+        </article>
+
+        <article class="tile b-suggest pop">
+          <div class="b-art">
+            <div class="chips-row"><span>I</span><span>want</span><span>water</span></div>
+            <div class="suggest liquid"><svg class="i"><use href="#i-spark2"/></svg>“Can I have some water, please?”</div>
+            <div class="suggest liquid dim">“I want some water.”</div>
+          </div>
+          <p>On-device suggestions that never add words you didn't pick</p>
+        </article>
+
+        <article class="tile b-blink pop">
+          <div class="b-art center"><svg class="b-sticker"><use href="#st-blink"/></svg></div>
+          <p>Five quick blinks calls HELP</p>
+        </article>
+
+        <article class="tile b-partner pop">
+          <div class="b-art center">
+            <div class="partner"><small>For the person you're talking to</small><b>I need more time.</b></div>
+          </div>
+          <p>A partner screen that shows the message as you build it</p>
+        </article>
+
+        <article class="tile b-siri pop">
+          <div class="b-art">
+            <div class="notif liquid"><img src="assets/app-icon.png" alt="" width="34" height="34"><div><b>EchoVoice</b><span>Help is on the way. Speaking “I need help now.”</span></div><time>now</time></div>
+            <div class="action-row"><span class="act">Siri</span><span class="act">Shortcuts</span><span class="act on">Action Button</span></div>
+          </div>
+          <p>Call for help from Siri, Shortcuts or the Action Button</p>
+        </article>
+
+        <article class="tile b-nfc pop">
+          <div class="b-art center"><svg class="b-sticker"><use href="#st-nfc"/></svg></div>
+          <p>NFC tags that speak when touched</p>
+        </article>
+
+        <article class="tile b-offline pop">
+          <div class="b-art center"><span class="round"><svg class="i"><use href="#i-plane"/></svg></span></div>
+          <p>Works with no internet</p>
+        </article>
+
+        <article class="tile b-pdf pop">
+          <div class="b-art center">
+            <div class="doc"><b>Speech journal summary</b><i></i><i></i><i class="short"></i><svg viewBox="0 0 120 34"><polyline points="2,24 22,18 42,22 62,12 82,16 102,22 118,20"/></svg><span>PDF · CSV</span></div>
+          </div>
+          <p>A one-page report for your speech therapist</p>
+        </article>
+
+        <article class="tile b-lock pop">
+          <div class="b-art center"><span class="round lock-ring"><svg class="i"><use href="#i-lock"/></svg></span></div>
+          <p>Board lock: hold 1.5s to unlock</p>
+        </article>
+
+        <article class="tile b-ipad pop">
+          <div class="b-art crop-ipad"><img src="assets/shots/ipad-1-board.jpg" alt="" width="1200" height="1600" loading="lazy"></div>
+          <p>Up to 64 phrases a page on iPad</p>
+        </article>
+        <article class="tile b-backup pop">
+          <div class="b-art center"><div class="file"><svg class="i"><use href="#i-mic"/></svg><b>My voice.echovoice</b><small>Backup file · yours to keep</small></div></div>
+          <p>Export recordings as a backup your family keeps</p>
+        </article>
+      </div>
+      <a class="cta cta-sm pop bento-cta" href="install/">Download for iPhone <svg class="i"><use href="#i-arrow"/></svg></a>
+    </section>
+
+    <!-- ───────── Privacy ───────── -->
+    <section class="block privacy">
+      <h2 class="mega pop">Nothing leaves<br><span class="lime">your phone.</span></h2>
+      <div class="facts">
+        <p class="pop"><b>No account</b>Open it and talk.</p>
+        <p class="pop"><b>No ads, no tracking</b>We collect nothing. Not even analytics.</p>
+        <p class="pop"><b>No EchoVoice server</b>Your recordings are yours. Export a backup any time.</p>
+      </div>
+    </section>
+
+    <!-- ───────── Story ───────── -->
+    <section class="block story" id="story">
+      <span class="sticker s-story pop" style="--r:-6deg"><svg><use href="#st-bear"/></svg></span>
+      <blockquote class="pop">
+        <p>"My grandpa lost his voice to motor neuron disease. The tools we found were expensive, slow, or built for someone else. EchoVoice is what we wish he'd had."</p>
+        <footer>Ayaan, Charan and Sree · Rouse High School, Leander, Texas</footer>
+      </blockquote>
+    </section>
+
+    <!-- ───────── Get ───────── -->
+    <section class="block get" id="get">
+      <h2 class="pop">Say what matters.</h2>
+      <p class="lead pop">Install the free beta on your iPhone today, or ask us for a TestFlight invite. The App Store release is in progress.</p>
+      <div class="get-row pop">
+        <a class="cta" href="install/">Download for iPhone <svg class="i"><use href="#i-arrow"/></svg></a>
+        <a class="cta ghost" href="mailto:ayaan.rustagi2010@gmail.com?subject=EchoVoice%20beta">Get a TestFlight invite</a>
+        <a class="cta ghost" href="mailto:ayaan.rustagi2010@gmail.com?subject=EchoVoice%20review">I'm an SLP: request a review</a>
+      </div>
+      <div class="peek-wrap" aria-hidden="true">
+        <figure class="iphone peek slide-up"><img src="assets/shots/iphone-1-board.jpg" alt="" width="598" height="1300" loading="lazy"></figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p class="wordmark" aria-hidden="true">EchoVoice</p>
+    <div class="foot-row">
+      <span>Free. Private. Not a medical device.</span>
+      <nav aria-label="Footer">
+        <a href="privacy/">Privacy</a>
+        <a href="mailto:ayaan.rustagi2010@gmail.com">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- ───────── Icons + stickers (original artwork) ───────── -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+      <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5zM4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+      <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21"/></symbol>
+      <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l10-6.5z" fill="currentColor" stroke="none"/></symbol>
+
+      <symbol id="i-spark2" viewBox="0 0 24 24"><path d="M12 3c.8 4.6 2.4 6.2 7 7-4.6.8-6.2 2.4-7 7-.8-4.6-2.4-6.2-7-7 4.6-.8 6.2-2.4 7-7z"/></symbol>
+      <symbol id="i-plane" viewBox="0 0 24 24"><path d="M10.5 13.5 4 12l-1.5-1.5L6 10l4.5 1L15 4.5c.8-.8 2.2-.8 3 0s.8 2.2 0 3L11.5 12l1 4.5L12 20l-1.5-1.5z"/></symbol>
+      <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></symbol>
+      <symbol id="st-bear" viewBox="0 0 120 110"><circle cx="30" cy="30" r="22" fill="#acd934"/><circle cx="90" cy="30" r="22" fill="#acd934"/><ellipse cx="60" cy="66" rx="48" ry="40" fill="#1e4f2e"/><circle cx="44" cy="60" r="10" fill="#f7f5ed"/><circle cx="76" cy="60" r="10" fill="#f7f5ed"/><circle cx="45" cy="61" r="4.5" fill="#1e4f2e"/><circle cx="77" cy="61" r="4.5" fill="#1e4f2e"/><path d="M47 80q13 9 26 0" stroke="#f7f5ed" stroke-width="6" fill="none" stroke-linecap="round"/></symbol>
+      <symbol id="st-mic" viewBox="0 0 80 80"><circle cx="40" cy="40" r="38" fill="#1e4f2e"/><rect x="31" y="17" width="18" height="30" rx="9" fill="#f7f5ed"/><path d="M23 40a17 17 0 0 0 34 0M40 57v8" stroke="#acd934" stroke-width="5" fill="none" stroke-linecap="round"/></symbol>
+      <symbol id="st-bubble" viewBox="0 0 150 96"><path d="M14 6h122a10 10 0 0 1 10 10v46a10 10 0 0 1-10 10H54l-24 20 4-20H14A10 10 0 0 1 4 62V16A10 10 0 0 1 14 6z" fill="#acd934"/><text x="75" y="48" text-anchor="middle" font-family="-apple-system,Helvetica,Arial" font-weight="800" font-size="21" fill="#10230f">I love you</text></symbol>
+      <symbol id="st-heart" viewBox="0 0 80 72"><path d="M40 70S4 48 4 24A18 18 0 0 1 40 14a18 18 0 0 1 36 10c0 24-36 46-36 46z" fill="#f0a64a"/></symbol>
+      <symbol id="st-wave" viewBox="0 0 120 56"><rect x="2" y="2" width="116" height="52" rx="26" fill="#1e4f2e"/><g stroke="#acd934" stroke-width="6" stroke-linecap="round"><path d="M28 28v0M40 20v16M52 13v30M64 22v12M76 16v24M88 24v8"/></g></symbol>
+      <symbol id="st-help" viewBox="0 0 130 56"><rect x="2" y="2" width="126" height="52" rx="16" fill="#df4b49"/><text x="65" y="37" text-anchor="middle" font-family="-apple-system,Helvetica,Arial" font-weight="900" font-size="24" letter-spacing="2" fill="#fff">! HELP</text></symbol>
+      <symbol id="st-spark" viewBox="0 0 60 60"><path d="M30 2c3 18 10 25 28 28-18 3-25 10-28 28-3-18-10-25-28-28C20 27 27 20 30 2z" fill="#acd934"/></symbol>
+      <symbol id="st-eye" viewBox="0 0 100 64"><path d="M4 32S24 4 50 4s46 28 46 28-20 28-46 28S4 32 4 32z" fill="#f7f5ed"/><circle cx="50" cy="32" r="17" fill="#1e4f2e"/><circle cx="50" cy="32" r="7" fill="#0b1a10"/><circle cx="56" cy="26" r="4" fill="#fff"/></symbol>
+      <symbol id="st-water" viewBox="0 0 110 90"><rect x="2" y="2" width="106" height="86" rx="20" fill="#acd934"/><circle cx="55" cy="34" r="16" fill="#d8ef9a"/><path d="M55 23s-8 9-8 14a8 8 0 0 0 16 0c0-5-8-14-8-14z" fill="#1e4f2e"/><text x="55" y="74" text-anchor="middle" font-family="-apple-system,Helvetica,Arial" font-weight="800" font-size="17" fill="#1e4f2e">Water</text></symbol>
+      <symbol id="st-yes" viewBox="0 0 110 90"><rect x="2" y="2" width="106" height="86" rx="20" fill="#1e4f2e"/><circle cx="55" cy="34" r="16" fill="#3f6b4c"/><path d="M47 34l6 6 10-11" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="55" y="74" text-anchor="middle" font-family="-apple-system,Helvetica,Arial" font-weight="800" font-size="17" fill="#f7f5ed">Yes</text></symbol>
+      <symbol id="st-pain" viewBox="0 0 110 90"><rect x="2" y="2" width="106" height="86" rx="20" fill="#f0a64a"/><circle cx="55" cy="34" r="16" fill="#f6cb92"/><path d="M53 25l4 6-4 4 4 6" stroke="#1e4f2e" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="55" y="74" text-anchor="middle" font-family="-apple-system,Helvetica,Arial" font-weight="800" font-size="17" fill="#1e4f2e">Pain</text></symbol>
+      <symbol id="st-hand" viewBox="0 0 90 90"><circle cx="45" cy="45" r="43" fill="#acd934"/><path d="M36 48V26a5 5 0 0 1 10 0v16m0-4V22a5 5 0 0 1 10 0v18m0-6a5 5 0 0 1 10 0v14c0 12-8 20-19 20h-3c-6 0-11-3-15-8l-8-11a5 5 0 0 1 8-6l3 4" stroke="#1e4f2e" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="st-head" viewBox="0 0 90 90"><circle cx="45" cy="45" r="43" fill="#f7f5ed"/><circle cx="45" cy="38" r="14" fill="#1e4f2e"/><path d="M22 72a23 23 0 0 1 46 0" fill="#1e4f2e"/><path d="M12 38h8M70 38h8M16 30l-6 8 6 8M74 30l6 8-6 8" stroke="#df4b49" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="st-blink" viewBox="0 0 90 90"><circle cx="45" cy="45" r="43" fill="#df4b49"/><path d="M20 44q25 18 50 0" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M28 54l-4 7M45 58v8M62 54l4 7" stroke="#fff" stroke-width="4" stroke-linecap="round"/><text x="45" y="34" text-anchor="middle" font-family="-apple-system,Helvetica,Arial" font-weight="900" font-size="16" fill="#fff">×5</text></symbol>
+      <symbol id="st-nfc" viewBox="0 0 90 90"><rect x="4" y="12" width="82" height="66" rx="14" fill="#f0a64a"/><path d="M34 36a12 12 0 0 1 0 18M43 30a20 20 0 0 1 0 30M52 24a28 28 0 0 1 0 42" stroke="#1e4f2e" stroke-width="5" fill="none" stroke-linecap="round"/></symbol>
+      <symbol id="st-aa" viewBox="0 0 90 90"><rect x="4" y="4" width="82" height="82" rx="22" fill="#000"/><text x="45" y="60" text-anchor="middle" font-family="-apple-system,Helvetica,Arial" font-weight="900" font-size="40" fill="#fff">Aa</text><rect x="20" y="68" width="50" height="5" rx="2.5" fill="#acd934"/></symbol>
+      <symbol id="st-onetap" viewBox="0 0 170 92"><rect x="3" y="3" width="164" height="86" rx="18" fill="#f7f5ed" stroke="#000" stroke-width="5"/><text x="85" y="42" text-anchor="middle" font-family="-apple-system,Helvetica,Arial" font-weight="900" font-size="30" fill="#1e4f2e" letter-spacing="-1">1 TAP</text><text x="85" y="74" text-anchor="middle" font-family="-apple-system,Helvetica,Arial" font-weight="900" font-size="24" fill="#000" letter-spacing="-.5">NOT 10</text></symbol>
+    </defs>
+  </svg>
+
+  <script src="site.js" defer></script>
+</body>
+</html>

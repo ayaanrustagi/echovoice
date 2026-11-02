@@ -1,0 +1,25 @@
+EchoVoice
+Copyright (c) 2026 The EchoVoice authors. Code released under the MIT License (see LICENSE).
+
+This project includes or builds on the following third-party work:
+
+Bricolage Grotesque
+  Copyright 2022 The Bricolage Grotesque Project Authors
+  https://github.com/ateliertriay/bricolage
+  SIL Open Font License 1.1 — EchoVoice/Fonts/OFL-BricolageGrotesque.txt
+
+Hanken Grotesk
+  Copyright 2021 The Hanken Grotesk Project Authors
+  https://github.com/marcologous/hanken-grotesk
+  SIL Open Font License 1.1 — EchoVoice/Fonts/OFL-HankenGrotesk.txt
+
+Universal Core vocabulary
+  Project Core, Center for Literacy and Disability Studies,
+  University of North Carolina at Chapel Hill
+  https://www.med.unc.edu/ahs/clds/universal-core-vocabulary/
+  Used under its Creative Commons license. The word list is not covered by
+  this project's MIT License.
+
+Apple frameworks (SwiftUI, AVFoundation, Speech, ARKit, Core NFC, App Intents,
+Foundation Models) are used under Apple's developer terms and are not
+redistributed here.
