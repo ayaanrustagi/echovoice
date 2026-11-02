@@ -167,9 +167,9 @@ h2 { font-size: clamp(32px, 4.4vw, 56px); }
 .cta-sm { height: 40px; padding: 0 20px; font-size: 15px; gap: 8px; font-weight: 500; }
 .cta-sm .i { width: 15px; height: 15px; }
 
-.stage { position: relative; width: min(1100px, 100%); height: clamp(640px, 64vw, 880px); margin: 40px auto 0; perspective: 1400px; }
+.stage { position: relative; width: min(1100px, 100%); height: clamp(480px, 44vw, 620px); margin: 32px auto 0; perspective: 1400px; }
 .hero-tilt {
-  position: absolute; left: 50%; top: 4%; width: clamp(270px, 27vw, 380px); translate: -50% 0; z-index: 3;
+  position: absolute; left: 50%; top: 4%; width: clamp(220px, 21vw, 300px); translate: -50% 0; z-index: 3;
   transform-origin: 50% 0;
   transform: rotateX(calc(16deg * (1 - var(--hp, 0)))) scale(calc(.9 + .1 * var(--hp, 0)));
 }
@@ -215,8 +215,8 @@ h2 { font-size: clamp(32px, 4.4vw, 56px); }
 .head { max-width: 720px; margin: 0 auto; }
 .head p { margin: 16px auto 0; color: var(--muted); font-size: clamp(16px, 1.4vw, 19px); max-width: 560px; }
 
-.duo { position: relative; width: min(700px, 100%); height: clamp(520px, 62vw, 700px); margin: 70px auto 0; }
-.duo .iphone { position: absolute; top: 0; width: clamp(220px, 27vw, 310px); }
+.duo { position: relative; width: min(600px, 100%); height: clamp(420px, 48vw, 540px); margin: 50px auto 0; }
+.duo .iphone { position: absolute; top: 0; width: clamp(180px, 21vw, 240px); }
 .duo-front { left: 50%; z-index: 2; translate: calc(-38% + var(--p, 0) * -14%) 0; rotate: calc(var(--p, 0) * -2deg); }
 .duo-back { left: 50%; translate: calc(-70% + var(--p, 0) * -22%) 8%; rotate: calc(-7deg + var(--p, 0) * -3deg); opacity: .78; }
 .s-tile-a { width: 120px; height: 98px; left: 4%; top: 58%; z-index: 3; }
@@ -231,7 +231,7 @@ h2 { font-size: clamp(32px, 4.4vw, 56px); }
 @keyframes bars { 0%, 100% { transform: scaleY(.3); } 50% { transform: scaleY(1); } }
 
 .bank-stage { position: relative; width: min(900px, 100%); margin: 70px auto 0; }
-.bank-phone { width: clamp(240px, 28vw, 320px); margin: 0 auto; }
+.bank-phone { width: clamp(190px, 21vw, 250px); margin: 0 auto; }
 .quote-card {
   position: absolute; display: flex; align-items: center; gap: 12px; padding: 14px 18px 14px 14px; text-align: left;
   border-radius: 22px; background: #f7f5ed; color: #0b2415; box-shadow: 0 24px 50px -16px rgba(0, 0, 0, .8);
@@ -248,7 +248,7 @@ h2 { font-size: clamp(32px, 4.4vw, 56px); }
 .split-copy .lead { margin-left: 0; }
 .note { margin: 18px 0 0; font-size: 14px; color: var(--dim); }
 .split-art { position: relative; display: flex; justify-content: center; }
-.split-art .iphone { width: clamp(230px, 26vw, 310px); }
+.split-art .iphone { width: clamp(190px, 21vw, 250px); }
 .tilt-r { rotate: 4deg; }
 .mini-chart { position: absolute; left: 0; bottom: 12%; width: 220px; padding: 14px 16px; border-radius: 20px; rotate: -3deg; z-index: 2; }
 .mini-chart small { font-size: 12px; color: var(--muted); }
@@ -271,7 +271,7 @@ h2 { font-size: clamp(32px, 4.4vw, 56px); }
   height: clamp(300px, 34vw, 420px); margin-top: 80px; overflow: hidden;
   -webkit-mask-image: linear-gradient(#000 55%, transparent); mask-image: linear-gradient(#000 55%, transparent);
 }
-.peek { width: clamp(240px, 28vw, 320px); margin: 0 auto; }
+.peek { width: clamp(190px, 21vw, 250px); margin: 0 auto; }
 
 .foot { padding: 70px clamp(16px, 4vw, 44px) 40px; border-top: 1px solid var(--line); position: relative; z-index: 1; background: var(--bg); }
 .wordmark { margin: 0; font-weight: 800; letter-spacing: -.06em; line-height: .8; font-size: clamp(64px, 17vw, 250px); color: #121513; text-align: center; user-select: none; }
@@ -398,8 +398,8 @@ h2 { font-size: clamp(32px, 4.4vw, 56px); }
   .hero { padding-top: 34px; }
   .mob-brand { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 34px; font-weight: 700; font-size: 18px; letter-spacing: -.02em; }
   .kicker { font-size: 15px; }
-  .stage { height: 620px; margin-top: 24px; }
-  .hero-tilt { width: 250px; }
+  .stage { height: 520px; margin-top: 24px; }
+  .hero-tilt { width: 210px; }
   .said { left: auto; right: -8px; font-size: 15px; padding: 10px 14px; }
   .s-bigbear { width: 120px; height: 110px; --x: 66% !important; --y: 44% !important; }
   .s-onetap { width: 110px; height: 60px; --x: 66% !important; --y: -2% !important; }
