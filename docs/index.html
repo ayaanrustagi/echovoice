@@ -16,6 +16,8 @@
 
   <!-- Dock header: icon over label. Becomes a bottom tab bar on phones. -->
   <header class="dock" aria-label="Main">
+    <a class="dock-brand" href="#top">EchoVoice</a>
+    <span class="dock-rule" aria-hidden="true"></span>
     <nav class="dock-tabs">
       <span class="dock-ind" aria-hidden="true"></span>
       <a class="dock-tab" href="#top" style="--n:0"><svg class="i" viewBox="0 0 24 24"><path class="ic-house" d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg>Home</a>
@@ -25,14 +27,12 @@
       <a class="dock-tab wide" href="#story" style="--n:4"><svg class="i" viewBox="0 0 24 24"><path class="ic-heart" d="M12 20s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.2a4.3 4.3 0 0 1 7.5 2.6C19.5 15.4 12 20 12 20z"/></svg>Story</a>
     </nav>
     <a class="dock-get" href="install/" style="--n:5"><svg class="i" viewBox="0 0 24 24"><g class="ic-arrow"><path d="M12 4v10"/><path d="m7.5 9.5 4.5 4.5 4.5-4.5"/></g><path d="M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"/></svg>Get it</a>
-    <span class="dock-rule" aria-hidden="true"></span>
-    <a class="dock-brand" href="#top" aria-label="EchoVoice home"><img src="assets/app-icon.png" alt="" width="28" height="28"><span>EchoVoice</span></a>
   </header>
 
   <main id="main">
     <!-- ───────── Hero ───────── -->
     <section class="hero" id="top">
-      <a class="mob-brand load" style="--d:0" href="#top"><img src="assets/app-icon.png" alt="" width="34" height="34">EchoVoice</a>
+      <a class="mob-brand load" style="--d:0" href="#top">EchoVoice</a>
       <p class="kicker load" style="--d:0">Built for iPhone and iPad</p>
       <h1 class="load" style="--d:1">The AAC app that speaks<br>in your own voice</h1>
       <a class="cta cta-sm load" style="--d:2" href="install/">Download for iPhone <svg class="i"><use href="#i-arrow"/></svg></a>
@@ -100,39 +100,11 @@
       </div>
     </section>
 
-    <!-- ───────── iPad ───────── -->
-    <section class="block ipad-block">
-      <header class="head pop">
-        <h2>Bigger board. Same muscle memory.</h2>
-        <p>On iPad the grid grows to fit more phrases on a page, and every word stays exactly where you left it.</p>
-      </header>
-      <div class="ipads" data-scrub>
-        <figure class="ipad ipad-back"><img src="assets/shots/ipad-2-journal.jpg" alt="" width="1200" height="1600" loading="lazy"></figure>
-        <figure class="ipad ipad-front"><img src="assets/shots/ipad-1-board.jpg" alt="EchoVoice on iPad with a 3-column board of phrases" width="1200" height="1600" loading="lazy"></figure>
-      </div>
-    </section>
-
-    <!-- ───────── Access sticker wall ───────── -->
-    <section class="block" id="access">
-      <header class="head pop">
-        <h2>However you move, it moves with you.</h2>
-        <p>Touch, your head, your eyes, or a sticker on the wheelchair arm.</p>
-      </header>
-      <div class="wall">
-        <figure class="tag pop" style="--r:-6deg"><svg><use href="#st-hand"/></svg><figcaption>Big touch targets</figcaption></figure>
-        <figure class="tag pop" style="--r:5deg"><svg><use href="#st-head"/></svg><figcaption>Head tracking</figcaption></figure>
-        <figure class="tag pop" style="--r:-3deg"><svg><use href="#st-eye"/></svg><figcaption>Eye gaze on TrueDepth</figcaption></figure>
-        <figure class="tag pop" style="--r:8deg"><svg><use href="#st-blink"/></svg><figcaption>5 blinks calls HELP</figcaption></figure>
-        <figure class="tag pop" style="--r:-9deg"><svg><use href="#st-nfc"/></svg><figcaption>NFC phrase tags</figcaption></figure>
-        <figure class="tag pop" style="--r:4deg"><svg><use href="#st-aa"/></svg><figcaption>Huge text, high contrast</figcaption></figure>
-      </div>
-    </section>
-
     <!-- ───────── Everything inside (bento) ───────── -->
     <section class="block" id="everything">
       <header class="head pop">
         <h2>Small things that add up<br>to a whole conversation</h2>
-        <p>Private, on-device, and built around one job: helping you get the words out.</p>
+        <p>Nothing leaves your phone. No account, no ads, no tracking, and no EchoVoice server.</p>
       </header>
       <div class="bento">
         <article class="tile b-voice pop">
@@ -203,27 +175,13 @@
       <a class="cta cta-sm pop bento-cta" href="install/">Download for iPhone <svg class="i"><use href="#i-arrow"/></svg></a>
     </section>
 
-    <!-- ───────── Privacy ───────── -->
-    <section class="block privacy">
-      <h2 class="mega pop">Nothing leaves<br><span class="lime">your phone.</span></h2>
-      <div class="facts">
-        <p class="pop"><b>No account</b>Open it and talk.</p>
-        <p class="pop"><b>No ads, no tracking</b>We collect nothing. Not even analytics.</p>
-        <p class="pop"><b>No EchoVoice server</b>Your recordings are yours. Export a backup any time.</p>
-      </div>
-    </section>
-
-    <!-- ───────── Story ───────── -->
-    <section class="block story" id="story">
+    <!-- ───────── Story + get it ───────── -->
+    <section class="block story get" id="story">
       <span class="sticker s-story pop" style="--r:-6deg"><svg><use href="#st-bear"/></svg></span>
       <blockquote class="pop">
         <p>"My grandpa lost his voice to motor neuron disease. The tools we found were expensive, slow, or built for someone else. EchoVoice is what we wish he'd had."</p>
         <footer>Ayaan, Charan and Sree · Rouse High School, Leander, Texas</footer>
       </blockquote>
-    </section>
-
-    <!-- ───────── Get ───────── -->
-    <section class="block get" id="get">
       <h2 class="pop">Say what matters.</h2>
       <p class="lead pop">Install the free beta on your iPhone today, or ask us for a TestFlight invite. The App Store release is in progress.</p>
       <div class="get-row pop">
