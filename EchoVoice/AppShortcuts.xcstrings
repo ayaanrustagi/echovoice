@@ -1,0 +1,61 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "Call for help with ${applicationName}": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pedir ayuda con ${applicationName}"
+          }
+        }
+      }
+    },
+    "${applicationName} help": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "${applicationName} ayuda"
+          }
+        }
+      }
+    },
+    "I need help with ${applicationName}": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Necesito ayuda con ${applicationName}"
+          }
+        }
+      }
+    },
+    "Speak with ${applicationName}": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hablar con ${applicationName}"
+          }
+        }
+      }
+    },
+    "Say something with ${applicationName}": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Decir algo con ${applicationName}"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

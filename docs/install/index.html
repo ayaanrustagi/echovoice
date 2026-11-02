@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Install EchoVoice</title>
+  <meta name="description" content="How to install the EchoVoice beta on your iPhone or iPad with Sideloadly.">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="../assets/app-icon.png" type="image/png">
+  <link rel="stylesheet" href="../site.css">
+  <style>
+    .install { width: min(760px, 100% - 32px); margin: 0 auto; padding: 150px 0 40px; }
+    .install h1 { font-size: clamp(36px, 5vw, 56px); font-weight: 600; letter-spacing: -.04em; }
+    .install .lead { margin: 18px 0 0; max-width: 600px; text-align: left; }
+    .dl { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin: 34px 0 10px; }
+    .dl small { color: var(--dim); font-size: 14px; }
+    .steps { list-style: none; margin: 48px 0 0; padding: 0; counter-reset: step; display: grid; gap: 12px; }
+    .steps li { counter-increment: step; position: relative; padding: 22px 24px 22px 74px; border-radius: 24px; background: #121413; box-shadow: inset 0 1px 0 rgba(255, 255, 255, .05); color: var(--muted); }
+    .steps li::before { content: counter(step); position: absolute; left: 22px; top: 20px; width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; background: var(--lime); color: var(--lime-ink); font-weight: 700; }
+    .steps b { display: block; color: var(--ink); font-size: 18px; letter-spacing: -.02em; margin-bottom: 4px; }
+    .steps a, .fine a { color: var(--lime); text-decoration: underline; text-underline-offset: 3px; }
+    .path { display: inline-block; margin-top: 6px; padding: 3px 9px; border-radius: 8px; background: #1f2321; color: var(--ink); font-size: 14px; }
+    .heads { margin: 40px 0 0; padding: 22px 24px; border-radius: 24px; background: color-mix(in srgb, var(--amber) 12%, #121413); color: var(--muted); }
+    .heads b { color: var(--ink); }
+    .heads ul { margin: 10px 0 0; padding-left: 20px; display: grid; gap: 6px; }
+    .fine { margin-top: 36px; color: var(--dim); font-size: 14px; }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand brand-lg" href="../" aria-label="EchoVoice home">
+      <img src="../assets/app-icon.png" alt="" width="38" height="38">
+      <span>EchoVoice</span>
+    </a>
+    <nav class="top-links" aria-label="Quick links">
+      <a href="../">Home</a>
+      <a href="https://github.com/ayaanrustagi/echovoice">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="install">
+    <h1>Install EchoVoice on iPhone</h1>
+    <p class="lead">Until it's on the App Store, you can install the free beta yourself with your own Apple ID and a computer. It takes about ten minutes the first time.</p>
+
+    <div class="dl">
+      <a class="cta cta-sm" href="https://github.com/ayaanrustagi/echovoice/releases/latest/download/EchoVoice.ipa">Download EchoVoice.ipa <svg class="i" viewBox="0 0 24 24"><path d="M12 4v12M6 11l6 6 6-6M5 20h14"/></svg></a>
+      <small>iPhone or iPad · iOS 17 or later</small>
+    </div>
+
+    <ol class="steps">
+      <li><b>Get Sideloadly on your computer</b>Download it free from <a href="https://sideloadly.io">sideloadly.io</a> for Mac or Windows. On Windows, also install iTunes and iCloud from Apple's website, not the Microsoft Store.</li>
+      <li><b>Plug in your iPhone</b>Use a cable. Unlock the phone and tap <em>Trust</em> when it asks about this computer.</li>
+      <li><b>Drop in EchoVoice.ipa and press Start</b>Drag the file you downloaded into Sideloadly and enter your Apple ID. Sideloadly signs the app with your own account so your iPhone will accept it.</li>
+      <li><b>Turn on Developer Mode</b>On the iPhone, open the setting below, switch it on, and restart when asked.<br><span class="path">Settings › Privacy &amp; Security › Developer Mode</span></li>
+      <li><b>Trust the app</b>Open the setting below, tap your Apple ID, then tap <em>Trust</em>. EchoVoice is ready to open.<br><span class="path">Settings › General › VPN &amp; Device Management</span></li>
+    </ol>
+
+    <div class="heads">
+      <b>Good to know</b>
+      <ul>
+        <li>With a free Apple ID, the app stops opening after <b>7 days</b>. Plug in and press Start again to renew it. Your phrases and recordings stay on the phone.</li>
+        <li>NFC phrase tags may not work in this version, because free Apple IDs can't use that feature. Everything else does.</li>
+        <li>If someone you care for will use EchoVoice, it's easiest for a family member to do these steps.</li>
+      </ul>
+    </div>
+
+    <p class="fine">Prefer not to sideload? <a href="mailto:ayaan.rustagi2010@gmail.com?subject=EchoVoice%20beta">Email us</a> and we'll send a TestFlight invite as soon as it's available. Sideloadly is a third-party tool and isn't made by us or by Apple.</p>
+  </main>
+
+  <footer class="foot">
+    <div class="foot-row">
+      <span>Free. Private. Not a medical device.</span>
+      <nav aria-label="Footer"><a href="../privacy/">Privacy</a><a href="mailto:ayaan.rustagi2010@gmail.com">Contact</a></nav>
+    </div>
+  </footer>
+</body>
+</html>

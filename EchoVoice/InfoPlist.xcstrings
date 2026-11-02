@@ -1,0 +1,74 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "NFCReaderUsageDescription": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "EchoVoice reads and writes NFC tags so you can place a tag anywhere in your home and tap it to speak a phrase in your own voice."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "EchoVoice lee y escribe etiquetas NFC para que pongas una etiqueta en tu casa y la toques para decir una frase con tu propia voz."
+          }
+        }
+      }
+    },
+    "NSCameraUsageDescription": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "EchoVoice uses the front camera to follow your head or eyes so you can choose phrases hands-free. Camera images are processed on this device and are never saved or sent anywhere."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "EchoVoice usa la cámara frontal para seguir tu cabeza o tus ojos y elegir frases sin usar las manos. Las imágenes se procesan en este dispositivo; nunca se guardan ni se envían."
+          }
+        }
+      }
+    },
+    "NSMicrophoneUsageDescription": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "EchoVoice records phrases in your own voice so you can speak them later. In Listen mode it hears your conversation partner so it can suggest replies, and it can measure how loud the room is to adjust speaking volume. Nothing is sent anywhere."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "EchoVoice graba frases con tu voz para decirlas después. En Escuchar, oye a la otra persona para sugerir respuestas. También puede medir el ruido del lugar para ajustar el volumen. No se envía nada."
+          }
+        }
+      }
+    },
+    "NSSpeechRecognitionUsageDescription": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "During a voice journal check-in, EchoVoice checks how much of the practice sentence was understood. In Listen mode, it turns what your conversation partner says into text so it can suggest replies. Recognition runs entirely on this device, and audio is never stored or sent anywhere."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En el diario de voz, EchoVoice revisa cuánto se entendió de la oración de práctica. En Escuchar, convierte lo que dice la otra persona en texto para sugerir respuestas. Todo se reconoce en este dispositivo. El audio nunca se guarda ni se envía."
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}
