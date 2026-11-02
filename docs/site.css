@@ -167,7 +167,7 @@ h2 { font-size: clamp(32px, 4.4vw, 56px); }
 .cta-sm { height: 40px; padding: 0 20px; font-size: 15px; gap: 8px; font-weight: 500; }
 .cta-sm .i { width: 15px; height: 15px; }
 
-.stage { position: relative; width: min(1100px, 100%); height: clamp(480px, 44vw, 620px); margin: 32px auto 0; perspective: 1400px; }
+.stage { position: relative; width: min(1100px, 100%); height: calc(clamp(220px, 21vw, 300px) * 2.3 + 50px); margin: 32px auto 0; perspective: 1400px; }
 .hero-tilt {
   position: absolute; left: 50%; top: 4%; width: clamp(220px, 21vw, 300px); translate: -50% 0; z-index: 3;
   transform-origin: 50% 0;
@@ -398,7 +398,7 @@ h2 { font-size: clamp(32px, 4.4vw, 56px); }
   .hero { padding-top: 34px; }
   .mob-brand { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 34px; font-weight: 700; font-size: 18px; letter-spacing: -.02em; }
   .kicker { font-size: 15px; }
-  .stage { height: 520px; margin-top: 24px; }
+  .stage { height: calc(210px * 2.3 + 50px); margin-top: 24px; }
   .hero-tilt { width: 210px; }
   .said { left: auto; right: -8px; font-size: 15px; padding: 10px 14px; }
   .s-bigbear { width: 120px; height: 110px; --x: 66% !important; --y: 44% !important; }
