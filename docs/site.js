@@ -65,24 +65,54 @@ document.querySelectorAll(".pop, .slide-up").forEach((el) => {
   revealer.observe(el);
 });
 
-/* Header: the glass pill slides in once the plain top bar has scrolled away,
-   and highlights the section in view */
-const nav = document.querySelector(".nav");
-const navLinks = [...document.querySelectorAll(".nav-links a")];
-const setShown = () => nav.classList.toggle("shown", window.scrollY > 140);
-setShown();
-window.addEventListener("scroll", setShown, { passive: true });
+/* Dock: the lime pill glides to the tab you hover, and settles back on the
+   section in view. The dock tucks away while you scroll down and comes back
+   when you scroll up. */
+const dock = document.querySelector(".dock");
+const indicator = dock.querySelector(".dock-ind");
+const tabs = [...dock.querySelectorAll(".dock-tab")];
+let activeTab = null;
+
+function moveIndicator(tab) {
+  indicator.classList.toggle("on", Boolean(tab));
+  if (!tab) return;
+  indicator.style.width = `${tab.offsetWidth}px`;
+  indicator.style.translate = `${tab.offsetLeft}px 0`;
+}
+
+function setActive(tab) {
+  activeTab = tab;
+  tabs.forEach((t) => t.classList.toggle("active", t === tab));
+  moveIndicator(tab);
+}
+
+tabs.forEach((tab) => {
+  tab.addEventListener("mouseenter", () => moveIndicator(tab));
+  tab.addEventListener("focus", () => moveIndicator(tab));
+});
+dock.querySelector(".dock-tabs").addEventListener("mouseleave", () => moveIndicator(activeTab));
+window.addEventListener("resize", () => moveIndicator(activeTab));
 
 const sectionSpy = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (!entry.isIntersecting) return;
-    navLinks.forEach((a) => a.classList.toggle("active", a.hash === `#${entry.target.id}`));
+    setActive(tabs.find((t) => t.hash === `#${entry.target.id}`) || null);
   });
 }, { rootMargin: "-45% 0px -50% 0px" });
-navLinks.forEach((a) => {
-  const target = document.querySelector(a.hash);
+tabs.forEach((tab) => {
+  const target = document.querySelector(tab.hash);
   if (target) sectionSpy.observe(target);
 });
+setActive(tabs[0]);
+
+const TUCK_AFTER = 400;
+let lastY = window.scrollY;
+window.addEventListener("scroll", () => {
+  const y = window.scrollY;
+  if (Math.abs(y - lastY) < 6) return;
+  dock.classList.toggle("tucked", y > lastY && y > TUCK_AFTER);
+  lastY = y;
+}, { passive: true });
 
 /* Scroll-linked motion, all written in one rAF per scroll:
    --hp  hero phone flattens out of its tilt as you scroll (0 → 1)

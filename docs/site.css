@@ -39,63 +39,85 @@ h2 { font-size: clamp(32px, 4.4vw, 56px); }
 .lead { margin: 20px auto 0; max-width: 600px; font-size: clamp(17px, 1.5vw, 20px); color: var(--muted); }
 .lime { color: var(--lime); }
 
-/* ── Liquid glass ── */
-.liquid {
-  position: relative;
-  background: rgba(38, 42, 40, .42);
-  backdrop-filter: blur(18px) saturate(190%) brightness(1.08);
-  -webkit-backdrop-filter: blur(18px) saturate(190%) brightness(1.08);
-  box-shadow:
-    inset 0 1px .5px rgba(255, 255, 255, .28),
-    inset 0 -1px .5px rgba(255, 255, 255, .06),
-    inset 0 0 8px rgba(255, 255, 255, .05),
-    0 .5px 1px rgba(0, 0, 0, .3),
-    0 14px 34px -10px rgba(0, 0, 0, .6);
-  border: 0;
-}
-/* specular rim: bright at the top-left, fading around the edge */
-.liquid::before {
-  content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1px; pointer-events: none;
-  background: linear-gradient(140deg, rgba(255, 255, 255, .55), rgba(255, 255, 255, .08) 30%, rgba(255, 255, 255, .02) 60%, rgba(255, 255, 255, .22));
-  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor; mask-composite: exclude;
-}
-@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
-  .liquid { background: rgba(30, 33, 31, .94); }
-}
+/* ── Floating cards (solid, no glass) ── */
+.float-card { position: relative; background: #1f2321; box-shadow: inset 0 1px 0 rgba(255, 255, 255, .07), 0 14px 34px -10px rgba(0, 0, 0, .6); }
 
-/* ── Top bar (scrolls away) ── */
-.topbar { position: absolute; inset: 0 0 auto; z-index: 20; display: flex; justify-content: space-between; align-items: center; width: min(1180px, 100% - 32px); margin: 0 auto; padding-top: 30px; }
-.brand { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 17px; letter-spacing: -.015em; }
-.brand img { border-radius: 8px; }
-.brand-lg { font-size: 20px; gap: 12px; }
-.brand-lg img { border-radius: 9px; }
-.top-links { display: flex; gap: 22px; }
-.top-links a { display: inline-flex; align-items: center; gap: 6px; font-weight: 500; font-size: 15px; text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
-.top-links a:hover { color: var(--lime); }
-.top-links .i { width: 15px; height: 15px; }
-
-/* ── Glass pill (slides in after the hero) ── */
-.nav-wrap { position: fixed; inset: 14px 0 auto; z-index: 50; display: flex; justify-content: center; padding: 0 12px; pointer-events: none; }
-.nav {
-  pointer-events: auto; width: min(1120px, 100%);
-  display: flex; align-items: center; gap: 10px;
-  padding: 7px 7px 7px 14px; border-radius: 999px;
-  opacity: 0; transform: translateY(-140%) scale(.96);
-  transition: opacity .5s var(--ease), transform .7s var(--ease);
+/* ── Dock header: icon over label, a lime pill glides to the tab you're on ── */
+.dock {
+  --dock-bg: #f4f2ea;
+  --dock-ink: #46524a;
+  --dock-on: #1e4f2e;
+  --dock-pill: #e3f1bb;
+  position: fixed; top: 16px; left: 50%; z-index: 50;
+  display: flex; align-items: center; gap: 4px;
+  padding: 6px; border-radius: 999px;
+  background: var(--dock-bg); color: var(--dock-ink);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, .9) inset, 0 10px 30px -8px rgba(0, 0, 0, .55), 0 2px 6px rgba(0, 0, 0, .25);
+  translate: -50% 0;
+  transition: translate .55s var(--ease), box-shadow .3s;
 }
-.nav.shown { opacity: 1; transform: none; }
-.nav-links { margin-left: auto; display: flex; gap: 2px; }
-.nav-links a { padding: 8px 14px; border-radius: 999px; font-size: 14.5px; color: rgba(245, 245, 247, .78); transition: color .2s, background .25s; }
-.nav-links a:hover { color: var(--ink); background: rgba(255, 255, 255, .08); }
-.nav-links a.active { color: var(--ink); background: rgba(255, 255, 255, .11); }
-.nav-cta {
-  display: inline-flex; align-items: center; height: 40px; padding: 0 18px; border-radius: 999px;
-  background: #f5f5f7; color: #0b0c0c; font-weight: 600; font-size: 14.5px;
+.js .dock { animation: dock-in .9s var(--spring) .15s backwards; }
+.dock.tucked { translate: -50% calc(-100% - 30px); }
+@keyframes dock-in { from { translate: -50% -140%; } }
+
+.dock-tabs { position: relative; display: flex; }
+.dock-ind {
+  position: absolute; top: 0; bottom: 0; left: 0; width: 0; border-radius: 999px;
+  background: var(--dock-pill); opacity: 0; pointer-events: none;
+  transition: translate .5s var(--spring), width .5s var(--spring), opacity .25s;
+}
+.dock-ind.on { opacity: 1; }
+.dock-static .dock-tab.active { background: var(--dock-pill); }
+
+.dock-tab {
+  position: relative; z-index: 1;
+  display: grid; justify-items: center; gap: 3px;
+  min-width: 74px; padding: 8px 12px 7px; border-radius: 999px;
+  font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  transition: color .25s;
+}
+.dock-tab .i { width: 20px; height: 20px; stroke-width: 1.9; overflow: visible; }
+.dock-tab:hover, .dock-tab.active { color: var(--dock-on); }
+.js .dock-tab { animation: tab-in .6s var(--ease) backwards; animation-delay: calc(.45s + var(--n, 0) * .05s); }
+@keyframes tab-in { from { opacity: 0; translate: 0 6px; } }
+
+/* each icon has its own little move */
+.dock-tab .i * { transform-box: fill-box; transform-origin: center; }
+.dock-tab:hover .ic-house    { animation: hop .5s var(--spring); }
+.dock-tab:hover .ic-grid rect:nth-child(odd)  { animation: blink-tile .5s var(--ease); }
+.dock-tab:hover .ic-grid rect:nth-child(even) { animation: blink-tile .5s var(--ease) .12s; }
+.dock-tab:hover .ic-bars line { animation: eq .7s var(--ease); transform-origin: center; }
+.dock-tab:hover .ic-bars line:nth-child(2) { animation-delay: .08s; }
+.dock-tab:hover .ic-bars line:nth-child(3) { animation-delay: .16s; }
+.dock-tab:hover .ic-bars line:nth-child(4) { animation-delay: .24s; }
+.dock-tab:hover .ic-line { stroke-dasharray: 40; animation: draw .7s var(--ease); }
+.dock-tab:hover .ic-heart    { animation: beat .8s var(--ease); }
+@keyframes hop { 40% { transform: translateY(-3px); } }
+@keyframes blink-tile { 45% { transform: scale(.55); } }
+@keyframes eq { 35% { transform: scaleY(.35); } 70% { transform: scaleY(1.25); } }
+@keyframes draw { from { stroke-dashoffset: 40; } }
+@keyframes beat { 20% { transform: scale(1.25); } 40% { transform: scale(.95); } 60% { transform: scale(1.15); } }
+
+.dock-get {
+  display: grid; justify-items: center; gap: 3px;
+  min-width: 82px; padding: 8px 14px 7px; margin-left: 2px; border-radius: 999px;
+  background: var(--forest); color: #eaf6c8;
+  font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
   transition: transform .35s var(--spring), background .2s;
 }
-.nav-cta:hover { transform: scale(1.04); background: #fff; }
-.nav-cta:active { transform: scale(.96); }
+.dock-get .i { width: 20px; height: 20px; stroke-width: 1.9; }
+.dock-get .ic-arrow { transform-box: fill-box; }
+.dock-get:hover { background: #245c36; transform: scale(1.04); }
+.dock-get:hover .ic-arrow { animation: drop .7s var(--ease); }
+.dock-get:active { transform: scale(.96); }
+@keyframes drop { 40% { transform: translateY(3px); } 41% { opacity: 1; } }
+
+.dock-rule { width: 1px; height: 24px; margin: 0 10px 0 8px; background: rgba(30, 79, 46, .16); }
+.dock-brand { display: flex; align-items: center; gap: 8px; padding-right: 14px; color: var(--dock-on); font-weight: 800; font-size: 16px; letter-spacing: -.02em; }
+.dock-brand img { width: 28px; height: 28px; border-radius: 7px; transition: rotate .5s var(--spring); }
+.dock-brand:hover img { rotate: -12deg; }
+
+.mob-brand { display: none; }
 
 /* ── Buttons ── */
 .cta {
@@ -390,13 +412,22 @@ h2 { font-size: clamp(32px, 4.4vw, 56px); }
   .b-ipad { grid-column: span 2; }
 }
 @media (max-width: 860px) {
-  .nav-links { display: none; }
-  .nav-cta { margin-left: auto; }
+  .dock-tab { min-width: 64px; padding-inline: 8px; }
+  .dock-rule, .dock-brand span { display: none; }
+  .dock-brand { padding: 0 6px 0 4px; }
 }
 @media (max-width: 700px) {
-  .topbar { padding-top: 22px; }
-  .top-links a:first-child { display: none; }
-  .hero { padding-top: 120px; }
+  /* on phones the dock becomes a tab bar at the bottom, like an iPhone app */
+  .dock { top: auto; bottom: calc(12px + env(safe-area-inset-bottom)); gap: 2px; padding: 5px; }
+  .dock.tucked { translate: -50% calc(100% + 30px); }
+  @keyframes dock-in { from { translate: -50% 140%; } }
+  .dock-brand, .dock-rule, .dock-tab.wide { display: none; }
+  .dock-static .dock-brand { display: flex; padding: 0 8px 0 6px; }
+  .dock-tab, .dock-get { min-width: 0; width: 62px; padding: 7px 0 6px; font-size: 9px; letter-spacing: .05em; }
+  .foot { padding-bottom: 110px; }
+  .hero { padding-top: 34px; }
+  .mob-brand { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 34px; font-weight: 700; font-size: 18px; letter-spacing: -.02em; }
+  .mob-brand img { border-radius: 8px; }
   .kicker { font-size: 15px; }
   .stage { height: 620px; margin-top: 24px; }
   .hero-tilt { width: 250px; }
