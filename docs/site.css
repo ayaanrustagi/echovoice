@@ -99,6 +99,13 @@ h2 { font-size: clamp(32px, 4.4vw, 56px); }
 @keyframes draw { from { stroke-dashoffset: 40; } }
 @keyframes beat { 20% { transform: scale(1.25); } 40% { transform: scale(.95); } 60% { transform: scale(1.15); } }
 
+.dock-gh {
+  display: grid; place-items: center; width: 40px; height: 40px; align-self: center; margin-left: 2px; border-radius: 50%;
+  transition: color .25s, background .25s, transform .35s var(--spring);
+}
+.dock-gh svg { width: 19px; height: 19px; }
+.dock-gh:hover { color: var(--ink); background: var(--dock-pill); transform: scale(1.08) rotate(-8deg); }
+.js .dock-gh { animation: tab-in .6s var(--ease) backwards; animation-delay: .7s; }
 .dock-get {
   display: grid; justify-items: center; gap: 2px;
   min-width: 96px; padding: 6px 16px 5px; margin-left: 4px; border-radius: 999px;
@@ -393,6 +400,8 @@ h2 { font-size: clamp(32px, 4.4vw, 56px); }
   .dock.tucked { translate: -50% calc(100% + 30px); }
   @keyframes dock-in { from { translate: -50% 140%; } }
   .dock-brand, .dock-rule, .dock-tab.wide { display: none; }
+  .dock-gh { width: 44px; height: 44px; }
+  .dock-static .dock-tab[href^="http"] { display: none; }
   .dock-tab, .dock-get { min-width: 0; width: 62px; padding: 7px 0 6px; font-size: 9px; letter-spacing: .05em; }
   .foot { padding-bottom: 110px; }
   .hero { padding-top: 34px; }
