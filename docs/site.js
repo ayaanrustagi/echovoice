@@ -8,12 +8,12 @@ document.querySelectorAll(".stage .sticker").forEach((el, i) => el.style.setProp
 /* Hero demo: a finger taps a tile on the real board screenshot, and what it
    says pops out beside the phone. Positions are tile centres in the screenshot. */
 const TAPS = [
-  { x: 27, y: 38.5, say: "Can I have some water?" },
-  { x: 73, y: 21, say: "No." },
-  { x: 27, y: 56, say: "I'm in pain." },
-  { x: 73, y: 56, say: "I'm hungry." },
-  { x: 27, y: 21, say: "Yes." },
-  { x: 73, y: 87, say: "I'm okay." },
+  { x: 26, y: 50.8, say: "Can I have some water?" },
+  { x: 73.6, y: 38.5, say: "No." },
+  { x: 26, y: 63, say: "I'm in pain." },
+  { x: 73.6, y: 63, say: "I'm hungry." },
+  { x: 26, y: 38.5, say: "Yes." },
+  { x: 73, y: 84, say: "I'm okay." },
 ];
 const tap = document.getElementById("tap");
 const said = document.getElementById("said");
